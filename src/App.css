@@ -122,7 +122,7 @@ p {
 .scrolldown {
   position: absolute;
 
-  bottom: 5vh;
+  bottom: 6vh;
   animation: scrolldown 2s ease-in-out infinite;
   font-size: 1.3rem;
 }
@@ -379,7 +379,7 @@ p {
   top: 0;
 }
 .bubble-XL-left {
-  width: 40vw;
+  width: 30vw;
   height: 40vh;
   position: fixed;
   top: 20vh;
@@ -390,10 +390,10 @@ p {
 }
 
 .bubble-XL-right {
-  width: 40vw;
+  width: 30vw;
   height: 40vh;
   position: fixed;
-  top: 70vh;
+  top: 60vh;
   right: -2vw;
   background-color: #ebff7a;
   border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;

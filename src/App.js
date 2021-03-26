@@ -176,7 +176,7 @@ function App() {
                 type: "scenario",
                 duration: "200",
               }}
-              style={{ height: "300px", width: "300px" }}
+              style={{ height: "200px", width: "200px" }}
             />
           </div>
           <span className="scrolldown">
@@ -212,10 +212,7 @@ function App() {
           </div>
         </section>
 
-        <section
-          id="portfolio"
-          className="section section-column section-padding"
-        >
+        <section id="portfolio" className="section section-padding">
           <div className="portfolio-title">
             <h2>Portfolio</h2>
             <p>Travail récent</p>

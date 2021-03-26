@@ -14,7 +14,7 @@ import project2 from "./assets/project1-light.png";
 import { Fade } from "./animations/fade";
 import { ArrowUpIcon } from "./utils/SVGicon";
 
-import AOS from "aos";
+import Aos from "aos";
 import "aos/dist/aos.css";
 import ReactVivus from "react-vivus";
 
@@ -28,11 +28,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    AOS.init();
-  });
+    Aos.init({ duration: 2300 });
+  }, []);
 
   const [rotateY, setRotateY] = useState("0deg");
   const [rotateX, setRotateX] = useState("0deg");
+  // eslint-disable-next-line no-unused-vars
   const [degIncrement, setDegIncrement] = useState(0.2);
 
   const handleOnMouseEnter = (e) => {
@@ -91,7 +92,7 @@ function App() {
                 to="about-me"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration={500}
               >
                 About
@@ -102,7 +103,7 @@ function App() {
                 to="portfolio"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration={500}
               >
                 Portfolio
@@ -113,7 +114,7 @@ function App() {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={0}
                 duration={500}
               >
                 Contact
@@ -141,7 +142,7 @@ function App() {
                   to="about-me"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={0}
                   duration={500}
                 >
                   About me
@@ -159,7 +160,7 @@ function App() {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-70}
+                  offset={0}
                   duration={500}
                 >
                   Contact
@@ -185,12 +186,7 @@ function App() {
         </section>
 
         <section id="about-me" className="section section-padding">
-          <div
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-            className="information"
-          >
+          <div data-aos="fade-up" className="information">
             <h2>Bienvenue</h2>
             <p>
               Hello. My name is Thiéfaine Simonnou. <br /> I am a Software
@@ -198,12 +194,7 @@ function App() {
             </p>
           </div>
 
-          <div
-            data-aos="fade-left"
-            data-aos-offset="350"
-            data-aos-easing="ease-in-sine"
-            className="headshot-container"
-          >
+          <div data-aos="fade-up" className="headshot-container">
             <img
               className="headshot"
               src={thiefhead}
@@ -219,7 +210,7 @@ function App() {
           </div>
           <div className="portfolio-works">
             <div className="portfolio-work">
-              <div className="portfolio-work-container-img">
+              <div data-aos="fade-up" className="portfolio-work-container-img">
                 <img
                   id="1"
                   onMouseMove={(event) => handleOnMouseEnter(event, 1)}
@@ -228,19 +219,9 @@ function App() {
                   alt="test"
                   src={project1}
                   style={styles}
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-in-sine"
                 ></img>
               </div>
-              <div
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-duration="500"
-                data-aos-easing="ease-in-sine"
-                className="portfolio-work-text"
-              >
+              <div data-aos="fade-up" className="portfolio-work-text">
                 <h3>Titre</h3>
                 <p>
                   {" "}
@@ -259,7 +240,7 @@ function App() {
             </div>
 
             <div className="portfolio-work">
-              <div className="portfolio-work-container-img">
+              <div data-aos="fade-up" className="portfolio-work-container-img">
                 <img
                   id="2"
                   onMouseMove={(event) => handleOnMouseEnter(event, 2)}
@@ -268,19 +249,9 @@ function App() {
                   alt="test"
                   style={styles}
                   src={project2}
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-duration="500"
-                  data-aos-easing="ease-in-sine"
                 ></img>
               </div>
-              <div
-                data-aos="fade-left"
-                data-aos-offset="300"
-                data-aos-duration="500"
-                data-aos-easing="ease-in-sine"
-                className="portfolio-work-text"
-              >
+              <div data-aos="fade-up" className="portfolio-work-text">
                 <h3>Titre</h3>
                 <p>
                   {" "}

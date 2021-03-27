@@ -285,7 +285,17 @@ function App() {
               <button className="contact-button">Whatsapp</button>
             </div>
             <div className="contact-img">
-              <img width="300" src={dev2} alt="keyboard" />
+              <ReactVivus
+                id="f2"
+                option={{
+                  file: dev2,
+                  animTimingFunction: "EASE_OUT",
+                  type: "scenario",
+                  duration: "200",
+                }}
+                style={{ height: "200px", width: "200px" }}
+                callback=""
+              />
             </div>
           </div>
         </section>

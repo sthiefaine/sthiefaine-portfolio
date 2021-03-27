@@ -1,6 +1,7 @@
 h1 {
-  font-size: 3rem;
-  margin: 0;
+  font-size: 2.5rem;
+
+  margin-top: 10vh;
 }
 
 h2 {
@@ -12,7 +13,7 @@ h2 {
 
 p {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.2rem;
   font-weight: 300;
 }
 
@@ -36,7 +37,7 @@ p {
   position: relative;
   height: auto;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 0.5rem 0;
   margin: 0 1rem;
 }
@@ -123,9 +124,15 @@ p {
 .scrolldown {
   position: absolute;
 
-  bottom: 5.5vh;
+  bottom: 4.2vh;
   animation: scrolldown 2s ease-in-out infinite;
   font-size: 1.3rem;
+}
+
+.scrolldown-hide {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 1s, opacity 0.8s linear;
 }
 
 @keyframes scrolldown {
@@ -152,7 +159,7 @@ p {
 @media screen and (max-width: 700px) {
   .section:nth-child(2) {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
   }
 }
 
@@ -174,7 +181,13 @@ p {
 
 .headshot {
   width: 300px;
-  border-radius: 150px;
+  border-radius: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .headshot {
+    width: 200px;
+  }
 }
 
 .section:nth-child(3) {
@@ -190,6 +203,12 @@ p {
 @media screen and (max-width: 700px) {
   .section:nth-child(3) {
     height: 220vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .section:nth-child(3) {
+    height: 250vh;
   }
 }
 
@@ -298,7 +317,7 @@ p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
 }
 
 .contact-title {
@@ -392,18 +411,18 @@ p {
   left: -2vw;
   background-color: #d8fffa;
   border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
-  animation: bubble 7s linear infinite;
+  animation: bubble 6s linear infinite;
 }
 
 .bubble-XL-right {
   width: 30vw;
   height: 40vh;
   position: fixed;
-  top: 60vh;
+  top: 50vh;
   right: -2vw;
   background-color: #ebff7a;
   border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
-  animation: bubble 7s linear infinite;
+  animation: bubble 6s linear infinite;
 }
 
 @keyframes bubble {

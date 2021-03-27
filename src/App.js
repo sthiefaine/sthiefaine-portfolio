@@ -28,19 +28,18 @@ function App() {
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 2300 });
+    Aos.init({ duration: 1800 });
   }, []);
 
   const [rotateY, setRotateY] = useState("0deg");
   const [rotateX, setRotateX] = useState("0deg");
-  // eslint-disable-next-line no-unused-vars
-  const [degIncrement, setDegIncrement] = useState(0.2);
 
   const handleOnMouseEnter = (e) => {
     const event = e || window.event;
     const target = event.target || event.srcElement;
     const rect = target.getBoundingClientRect();
     const cardWidth = 250;
+    const degIncrement = 0.2;
 
     const getRotateDeg = (input) => {
       if (input < cardWidth * 0.33) {
@@ -76,13 +75,7 @@ function App() {
       <header className={scroll ? "header header-active" : "header"}>
         <nav className="nav">
           <span className="logo">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
+            <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
               <TSVGletters />
             </Link>
           </span>
@@ -134,8 +127,8 @@ function App() {
                 visible={true}
                 duration={1800}
                 animateEnter={true}
-                from={{ opacity: 0, x: -1000 }}
-                transformType="translate"
+                from={{ opacity: 0, x: 1 }}
+                transformType="scale"
               >
                 <Link
                   className="button"
@@ -152,8 +145,8 @@ function App() {
                 visible={true}
                 duration={1800}
                 animateEnter={true}
-                from={{ opacity: 0, y: 0, x: 1000 }}
-                transformType="translate"
+                from={{ opacity: 0, y: 0, x: 1 }}
+                transformType="scale"
               >
                 <Link
                   className="button"
@@ -173,14 +166,16 @@ function App() {
               id="foo"
               option={{
                 file: dev,
-                animTimingFunction: "EASE_OUT",
-                type: "scenario",
-                duration: "200",
+                animTimingFunction: "EASE",
+                type: "oneByOne",
+                duration: "300",
               }}
-              style={{ height: "200px", width: "200px" }}
+              style={{ width: "calc(25vw + 15vh)" }}
             />
           </div>
-          <span className="scrolldown">
+          <span
+            className={scroll ? "scrolldown scrolldown-hide" : "scrolldown"}
+          >
             <ArrowUpIcon /> Scroll down
           </span>
         </section>
@@ -206,7 +201,6 @@ function App() {
         <section id="portfolio" className="section section-padding">
           <div className="portfolio-title">
             <h2>Portfolio</h2>
-            <p>Travail récent</p>
           </div>
           <div className="portfolio-works">
             <div className="portfolio-work">
@@ -290,10 +284,10 @@ function App() {
                 option={{
                   file: dev2,
                   animTimingFunction: "EASE_OUT",
-                  type: "scenario",
-                  duration: "200",
+                  type: "oneByOne",
+                  duration: "600",
                 }}
-                style={{ height: "200px", width: "200px" }}
+                style={{ width: "25vw" }}
                 callback=""
               />
             </div>
@@ -304,8 +298,8 @@ function App() {
         <div className="footer-container">
           <div className="footer-item">
             <h4>About</h4>
-            <p>Site fais avec react</p>
-            <p>© thiéfaine 2021</p>
+            <p>Site fait avec react</p>
+            <p>© Thiéfaine 2021</p>
           </div>
 
           <div className="footer-item">

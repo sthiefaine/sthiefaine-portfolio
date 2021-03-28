@@ -3,7 +3,7 @@ import "./App.css";
 
 import dev from "./assets/dev.svg";
 import dev2 from "./assets/keyboard.svg";
-
+import whatsappqrcode from "./assets/qrcode_api.whatsapp.com_thiefaine.png";
 // eslint-disable-next-line no-unused-vars
 import { Link, animateScroll } from "react-scroll";
 
@@ -12,12 +12,18 @@ import { TSVGletters } from "./utils/SVGletters";
 import project1 from "./assets/project1-dark.png";
 import project2 from "./assets/project1-light.png";
 import { Fade } from "./animations/fade";
-import { ArrowUpIcon } from "./utils/SVGicon";
+import { ArrowUpIcon, DownloadIcon } from "./utils/SVGicon";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ReactVivus from "react-vivus";
 
+import {
+  GitIcon,
+  EmailIcon,
+  WhatsAppIcon,
+  LinkedinIcon,
+} from "./utils/SVGsocialIcon";
 function App() {
   const [scroll, setScroll] = useState(false);
 
@@ -38,8 +44,8 @@ function App() {
     const event = e || window.event;
     const target = event.target || event.srcElement;
     const rect = target.getBoundingClientRect();
-    const cardWidth = 250;
-    const degIncrement = 0.2;
+    const cardWidth = 200;
+    const degIncrement = 0.12;
 
     const getRotateDeg = (input) => {
       if (input < cardWidth * 0.33) {
@@ -121,7 +127,7 @@ function App() {
         <section id="home" className="section section-column section-padding">
           <div className="home-text">
             <h1>Thiéfaine Simonnou</h1>
-            <p>Full Stack Developer</p>
+            <p>Développeur web & intégrateur.</p>
             <div className="container-buttons">
               <Fade
                 visible={true}
@@ -170,7 +176,7 @@ function App() {
                 type: "oneByOne",
                 duration: "300",
               }}
-              style={{ width: "calc(25vw + 15vh)" }}
+              style={{ width: "calc(20vw + 15vh)" }}
             />
           </div>
           <span
@@ -182,11 +188,24 @@ function App() {
 
         <section id="about-me" className="section section-padding">
           <div data-aos="fade-up" className="information">
-            <h2>Bienvenue</h2>
+            <h2>Bienvenue 👋</h2>
             <p>
-              Hello. My name is Thiéfaine Simonnou. <br /> I am a Software
-              Developer and i'm praticing react & styled components.
+              Développeur web et intégrateur, c'est ma curiosité qui m'a amené à
+              faire une reconversion professionnelle dans ce domain. Grâce à
+              cela, j'ai pu approfondir ma soif de connaissance. N'hésitez pas à
+              me contacter si vous souhaitez en savoir plus.
             </p>
+            <div className="cv">
+              <h3>Télécharger mon C.V</h3>
+              <a
+                className="cv-button"
+                href="#"
+                download="CV_Thiefaine_Simonnou"
+              >
+                <DownloadIcon />
+                <p>C.V</p>
+              </a>
+            </div>
           </div>
 
           <div data-aos="fade-up" className="headshot-container">
@@ -263,6 +282,17 @@ function App() {
               </div>
             </div>
           </div>
+
+          <div className="portfolio-footer">
+            <h3>Découvrer mon Github</h3>
+            <a
+              href="https://github.com/sthiefaine"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GitIcon />
+            </a>
+          </div>
         </section>
 
         <section
@@ -275,8 +305,45 @@ function App() {
 
           <div className="contact-container">
             <div className="contact-buttons">
-              <button className="contact-button">eMail</button>
-              <button className="contact-button">Whatsapp</button>
+              <a
+                className="download-button"
+                href="https://api.whatsapp.com/send?phone=33658200918&text=Bonjour%20Thi%C3%A9faine,"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="download-icon">
+                  <WhatsAppIcon />
+                </div>
+                <div className="download-text">WhatsApp</div>
+              </a>
+
+              <div className="whatsapp-qrcode">
+                <img src={whatsappqrcode} alt="QRCode WhatsApp" />
+              </div>
+
+              <a
+                className="download-button"
+                href="mailto:thiefainedev@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="download-icon">
+                  <EmailIcon />
+                </div>
+                <div className="download-text">Email</div>
+              </a>
+
+              <a
+                className="download-button"
+                href="https://www.linkedin.com/in/thiefainesimonnou/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <div className="download-icon">
+                  <LinkedinIcon />
+                </div>
+                <div className="download-text">Linkedin</div>
+              </a>
             </div>
             <div className="contact-img">
               <ReactVivus
@@ -285,9 +352,9 @@ function App() {
                   file: dev2,
                   animTimingFunction: "EASE_OUT",
                   type: "oneByOne",
-                  duration: "600",
+                  duration: "400",
                 }}
-                style={{ width: "25vw" }}
+                style={{ width: "calc(25vw + 15vh)" }}
                 callback=""
               />
             </div>
@@ -298,7 +365,7 @@ function App() {
         <div className="footer-container">
           <div className="footer-item">
             <h4>About</h4>
-            <p>Site fait avec react</p>
+            <p>Site fait en React</p>
             <p>© Thiéfaine 2021</p>
           </div>
 

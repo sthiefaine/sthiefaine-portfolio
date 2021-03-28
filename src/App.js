@@ -81,13 +81,21 @@ function App() {
       <header className={scroll ? "header header-active" : "header"}>
         <nav className="nav">
           <span className="logo">
-            <Link to="home" spy={true} smooth={true} offset={0} duration={500}>
+            <Link
+              className="link"
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
               <TSVGletters />
             </Link>
           </span>
           <ul className="nav-items">
             <li className="nav-item">
               <Link
+                className="link"
                 to="about-me"
                 spy={true}
                 smooth={true}
@@ -99,6 +107,7 @@ function App() {
             </li>
             <li className="nav-item">
               <Link
+                className="link"
                 to="portfolio"
                 spy={true}
                 smooth={true}
@@ -110,6 +119,7 @@ function App() {
             </li>
             <li className="nav-item">
               <Link
+                className="link"
                 to="contact"
                 spy={true}
                 smooth={true}
@@ -120,7 +130,7 @@ function App() {
               </Link>
             </li>
           </ul>
-          <button>ON</button>
+          <button>☀️</button>
         </nav>
       </header>
       <main className="main">
@@ -238,7 +248,7 @@ function App() {
                   style={styles}
                 ></img>
               </div>
-              <div data-aos="fade-up" className="portfolio-work-text">
+              <div data-aos="fade-right" className="portfolio-work-text">
                 <h3>Mastermind</h3>
                 <p>
                   Apres avoir terminé ma formation, l'idée de faire un
@@ -246,6 +256,7 @@ function App() {
                   <br /> N'hésitez pas à faire une partie.
                 </p>
                 <a
+                  className="link"
                   href="https://mastermind-react.netlify.app/"
                   target="_blank"
                   rel="noreferrer"
@@ -270,7 +281,7 @@ function App() {
                   src={project2}
                 ></img>
               </div>
-              <div data-aos="fade-up" className="portfolio-work-text">
+              <div data-aos="fade-right" className="portfolio-work-text">
                 <h3>Titre</h3>
                 <p>
                   {" "}
@@ -279,6 +290,7 @@ function App() {
                   standard dummy text ever since the 1500s
                 </p>
                 <a
+                  className="link"
                   href="https://mastermind-react.netlify.app/"
                   target="_blank"
                   rel="noreferrer"
@@ -292,11 +304,13 @@ function App() {
           <div className="portfolio-footer">
             <h3>Découvrir mon Github</h3>
             <a
+              className="cv-button"
               href="https://github.com/sthiefaine"
               target="_blank"
               rel="noreferrer"
             >
               <GitIcon />
+              <p>Github</p>
             </a>
           </div>
         </section>

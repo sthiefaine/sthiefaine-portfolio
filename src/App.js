@@ -10,7 +10,7 @@ import { Link, animateScroll } from "react-scroll";
 import thiefhead from "./assets/thief-head.png";
 import { TSVGletters } from "./utils/SVGletters";
 import project1 from "./assets/project1-dark.png";
-import project2 from "./assets/project1-light.png";
+import project2 from "./assets/project2-light.png";
 import { Fade } from "./animations/fade";
 import { ArrowUpIcon, DownloadIcon } from "./utils/SVGicon";
 
@@ -182,9 +182,9 @@ function App() {
               id="foo"
               option={{
                 file: dev,
-                animTimingFunction: "EASE",
-                type: "oneByOne",
-                duration: "300",
+                animTimingFunction: "EASE_OUT",
+                type: "sync",
+                duration: 200,
               }}
               style={{ width: "calc(20vw + 15vh)" }}
             />
@@ -282,21 +282,19 @@ function App() {
                 ></img>
               </div>
               <div data-aos="fade-right" className="portfolio-work-text">
-                <h3>Titre</h3>
+                <h3>Portfolio</h3>
                 <p>
-                  {" "}
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s
+                  Création d'un porfolio pour me presenter, utiliser les
+                  transitions en css et s'approprier Next.js
                 </p>
-                <a
+                {/*                 <a
                   className="link"
-                  href="https://mastermind-react.netlify.app/"
+                  href=""
                   target="_blank"
                   rel="noreferrer"
                 >
                   Visiter le site
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -372,7 +370,7 @@ function App() {
                   file: dev2,
                   animTimingFunction: "EASE_OUT",
                   type: "oneByOne",
-                  duration: "400",
+                  duration: 200,
                 }}
                 style={{ width: "calc(25vw + 15vh)" }}
                 callback=""

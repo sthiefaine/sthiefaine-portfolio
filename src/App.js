@@ -131,10 +131,10 @@ function App() {
             <div className="container-buttons">
               <Fade
                 visible={true}
-                duration={1800}
+                duration={1200}
                 animateEnter={true}
-                from={{ opacity: 0, x: 1 }}
-                transformType="scale"
+                from={{ opacity: 0, x: -1500 }}
+                transformType="translate"
               >
                 <Link
                   className="button"
@@ -149,10 +149,10 @@ function App() {
               </Fade>
               <Fade
                 visible={true}
-                duration={1800}
+                duration={1200}
                 animateEnter={true}
-                from={{ opacity: 0, y: 0, x: 1 }}
-                transformType="scale"
+                from={{ opacity: 0, y: 0, x: -1000 }}
+                transformType="translate"
               >
                 <Link
                   className="button"
@@ -191,15 +191,16 @@ function App() {
             <h2>Bienvenue 👋</h2>
             <p>
               Développeur web et intégrateur, c'est ma curiosité qui m'a amené à
-              faire une reconversion professionnelle dans ce domain. Grâce à
-              cela, j'ai pu approfondir ma soif de connaissance. N'hésitez pas à
-              me contacter si vous souhaitez en savoir plus.
+              faire une reconversion professionnelle dans ce millieu et grâce à
+              cela, j'ai pu approfondir ma soif de connaissance en apprenant
+              React, Wordpress, Lumen, la POO... N'hésitez pas à me contacter si
+              vous souhaitez en savoir plus.
             </p>
             <div className="cv">
               <h3>Télécharger mon C.V</h3>
               <a
                 className="cv-button"
-                href="#"
+                href="./"
                 download="CV_Thiefaine_Simonnou"
               >
                 <DownloadIcon />
@@ -223,7 +224,10 @@ function App() {
           </div>
           <div className="portfolio-works">
             <div className="portfolio-work">
-              <div data-aos="fade-up" className="portfolio-work-container-img">
+              <div
+                data-aos="fade-right"
+                className="portfolio-work-container-img"
+              >
                 <img
                   id="1"
                   onMouseMove={(event) => handleOnMouseEnter(event, 1)}
@@ -235,12 +239,11 @@ function App() {
                 ></img>
               </div>
               <div data-aos="fade-up" className="portfolio-work-text">
-                <h3>Titre</h3>
+                <h3>Mastermind</h3>
                 <p>
-                  {" "}
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s
+                  Apres avoir terminé ma formation, l'idée de faire un
+                  mastermind en React pour pratiquer à été mon premier project.
+                  <br /> N'hésitez pas à faire une partie.
                 </p>
                 <a
                   href="https://mastermind-react.netlify.app/"
@@ -253,7 +256,10 @@ function App() {
             </div>
 
             <div className="portfolio-work">
-              <div data-aos="fade-up" className="portfolio-work-container-img">
+              <div
+                data-aos="fade-right"
+                className="portfolio-work-container-img"
+              >
                 <img
                   id="2"
                   onMouseMove={(event) => handleOnMouseEnter(event, 2)}
@@ -284,7 +290,7 @@ function App() {
           </div>
 
           <div className="portfolio-footer">
-            <h3>Découvrer mon Github</h3>
+            <h3>Découvrir mon Github</h3>
             <a
               href="https://github.com/sthiefaine"
               target="_blank"
@@ -371,6 +377,7 @@ function App() {
 
           <div className="footer-item">
             <h4>Languages</h4>
+            <p>Français</p>
           </div>
         </div>
       </footer>

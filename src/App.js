@@ -28,13 +28,17 @@ function App() {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
+    document.title = "Thiéfaine - Portfolio";
+  }, []);
+
+  useEffect(() => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 1.1);
     });
   }, []);
 
   useEffect(() => {
-    Aos.init({ duration: 1800 });
+    Aos.init({ duration: 1200 });
   }, []);
 
   const [rotateY, setRotateY] = useState("0deg");
@@ -71,7 +75,7 @@ function App() {
   };
 
   const styles = {
-    transitionDuration: `0.5s`,
+    transitionDuration: "0.5s",
     transitionProperty: "transform",
     transform: `rotateY(${rotateX ?? 0}) rotateX(${rotateY ?? 0})`,
   };
@@ -102,7 +106,7 @@ function App() {
                 offset={0}
                 duration={500}
               >
-                About
+                À propos
               </Link>
             </li>
             <li className="nav-item">
@@ -114,7 +118,7 @@ function App() {
                 offset={0}
                 duration={500}
               >
-                Portfolio
+                Projets
               </Link>
             </li>
             <li className="nav-item">
@@ -154,7 +158,7 @@ function App() {
                   offset={0}
                   duration={500}
                 >
-                  About me
+                  À propos
                 </Link>
               </Fade>
               <Fade
@@ -192,7 +196,7 @@ function App() {
           <span
             className={scroll ? "scrolldown scrolldown-hide" : "scrolldown"}
           >
-            <ArrowUpIcon /> Scroll down
+            <ArrowUpIcon /> Faire défiler
           </span>
         </section>
 
@@ -230,7 +234,7 @@ function App() {
 
         <section id="portfolio" className="section section-padding">
           <div className="portfolio-title">
-            <h2>Portfolio</h2>
+            <h2>Mes projets</h2>
           </div>
           <div className="portfolio-works">
             <div className="portfolio-work">
@@ -240,7 +244,7 @@ function App() {
               >
                 <img
                   id="1"
-                  onMouseMove={(event) => handleOnMouseEnter(event, 1)}
+                  onMouseMove={(event) => handleOnMouseEnter(event)}
                   onMouseLeave={(event) => handleOnMouseLeave(event)}
                   className="portfolio-work-img"
                   alt="test"
@@ -251,7 +255,7 @@ function App() {
               <div data-aos="fade-right" className="portfolio-work-text">
                 <h3>Mastermind</h3>
                 <p>
-                  Apres avoir terminé ma formation, l'idée de faire un
+                  Après avoir terminé ma formation, l'idée de faire un
                   mastermind en React pour pratiquer à été mon premier project.
                   <br /> N'hésitez pas à faire une partie.
                 </p>
@@ -318,7 +322,7 @@ function App() {
           className="section section-column section-padding"
         >
           <div className="contact-title">
-            <h2>Contact</h2>
+            <h2>Me contacter</h2>
           </div>
 
           <div className="contact-container">
@@ -373,7 +377,6 @@ function App() {
                   duration: 200,
                 }}
                 style={{ width: "calc(25vw + 15vh)" }}
-                callback=""
               />
             </div>
           </div>

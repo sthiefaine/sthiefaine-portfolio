@@ -22,7 +22,7 @@ const Contact = () => {
         <div className="contact-buttons">
           <a
             className="download-button"
-            href={`https://api.whatsapp.com/send?phone=${process.env.REACT_APP_WA_NUMBER}&text=Bonjour%20Thi%C3%A9faine,`}
+            href={`https://api.whatsapp.com/send?phone=33658200918&text=Bonjour%20Thi%C3%A9faine,`}
             target="_blank"
             rel="noreferrer"
           >
@@ -38,7 +38,7 @@ const Contact = () => {
 
           <a
             className="download-button"
-            href={`mailto:${process.env.REACT_APP_EMAIL}`}
+            href={`mailto:thiefainedev@gmail.com`}
             target="_blank"
             rel="noreferrer"
           >

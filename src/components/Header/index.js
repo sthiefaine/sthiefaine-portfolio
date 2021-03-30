@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 
 import { TSVGletters } from "../../utils/SVGletters";
 
+import "./index.css"
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 

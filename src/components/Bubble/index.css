@@ -1,0 +1,45 @@
+.bubble-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: -1000;
+  top: 0;
+}
+
+.bubble-XL-left {
+  width: 30vh;
+  height: 30vh;
+  position: fixed;
+  top: 20vh;
+  left: -2vw;
+  background-color: rgb(222 247 229);
+  border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
+  animation: bubble 5s linear infinite;
+}
+
+.bubble-XL-right {
+  width: 30vh;
+  height: 30vh;
+  position: fixed;
+  top: 50vh;
+  right: -2vw;
+  background-color: rgb(146 227 169);
+  border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
+  animation: bubble 6s linear infinite;
+}
+
+@keyframes bubble {
+  0% {
+    border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
+  }
+
+  33% {
+    border-radius: 58% 42% 77% 23% / 43% 40% 60% 57%;
+  }
+  66% {
+    border-radius: 30% 70% 86% 30% / 30% 21% 79% 70%;
+  }
+  100% {
+    border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
+  }
+}

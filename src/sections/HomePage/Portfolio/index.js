@@ -4,6 +4,9 @@ import project1 from "../../../assets/project1-dark.png";
 import project2 from "../../../assets/project2-light.png";
 
 import { GitIcon } from "../../../utils/SVGsocialIcon";
+
+import "./index.css";
+
 const Portfolio = () => {
   const [rotateY, setRotateY] = useState("0deg");
   const [rotateX, setRotateX] = useState("0deg");
@@ -13,7 +16,7 @@ const Portfolio = () => {
     const target = event.target || event.srcElement;
     const rect = target.getBoundingClientRect();
     const cardWidth = 200;
-    const degIncrement = 0.12;
+    const degIncrement = 0.3;
 
     const getRotateDeg = (input) => {
       if (input < cardWidth * 0.33) {

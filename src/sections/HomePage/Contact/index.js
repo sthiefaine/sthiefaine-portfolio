@@ -9,6 +9,8 @@ import {
 import dev2 from "../../../assets/keyboard.svg";
 import whatsappqrcode from "../../../assets/qrcode_api.whatsapp.com_thiefaine.png";
 
+import "./index.css";
+
 const Contact = () => {
   return (
     <section id="contact" className="section section-column section-padding">

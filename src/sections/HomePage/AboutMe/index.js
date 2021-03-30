@@ -1,6 +1,8 @@
 import thiefhead from "../../../assets/thief-head.png";
 import { DownloadIcon } from "../../../utils/SVGicon";
 
+import "./index.css";
+
 const AboutMe = () => {
   return (
     <section id="about-me" className="section section-padding">

@@ -6,6 +6,8 @@ import { Link } from "react-scroll";
 import ReactVivus from "react-vivus";
 import dev from "../../../assets/dev.svg";
 
+import "./index.css";
+
 const Home = () => {
   const [scroll, setScroll] = useState(false);
 

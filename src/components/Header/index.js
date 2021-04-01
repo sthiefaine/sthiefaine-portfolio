@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 
 import { TSVGletters } from "../../utils/SVGletters";
 
-import "./index.css"
+import "./index.css";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 
@@ -18,6 +18,7 @@ const Header = () => {
       <nav className="nav">
         <span className="logo">
           <Link
+            href="#home"
             className="link"
             to="home"
             spy={true}
@@ -31,6 +32,7 @@ const Header = () => {
         <ul className="nav-items">
           <li className="nav-item">
             <Link
+              href="#about-me"
               className="link"
               to="about-me"
               spy={true}
@@ -43,6 +45,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <Link
+              href="#portfolio"
               className="link"
               to="portfolio"
               spy={true}
@@ -55,6 +58,7 @@ const Header = () => {
           </li>
           <li className="nav-item">
             <Link
+              href="#contact"
               className="link"
               to="contact"
               spy={true}
@@ -66,7 +70,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <button>☀️</button>
+        <button className="button__theme">☀️</button>
       </nav>
     </header>
   );

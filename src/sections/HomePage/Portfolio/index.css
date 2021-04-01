@@ -16,7 +16,7 @@
 
 @media screen and (max-width: 450px) {
   .section:nth-child(3) {
-    height: 220vh;
+    height: 240vh;
   }
 }
 
@@ -87,7 +87,7 @@
   margin-bottom: 1rem;
 }
 .portfolio-work-text > a {
-  color: #9273ce;
+  color: rgb(81, 101, 253);
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
@@ -111,7 +111,7 @@
 .portfolio-work-container-img {
   width: 200px;
   margin: 0.5rem 0;
-  perspective: 50px;
+  perspective: 30px;
 }
 
 @media screen and (max-width: 750px) {

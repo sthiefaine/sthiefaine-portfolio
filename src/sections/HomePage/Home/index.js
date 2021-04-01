@@ -31,6 +31,7 @@ const Home = () => {
             transformType="translate"
           >
             <Link
+              href="#about-me"
               className="button"
               to="about-me"
               spy={true}
@@ -49,6 +50,7 @@ const Home = () => {
             transformType="translate"
           >
             <Link
+              href="#contact"
               className="button"
               to="contact"
               spy={true}

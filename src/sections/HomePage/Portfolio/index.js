@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import project1 from "../../../assets/project1-dark.png";
 import project2 from "../../../assets/project2-light.png";
 
@@ -7,46 +5,8 @@ import { GitIcon } from "../../../utils/SVGsocialIcon";
 
 import "./index.css";
 
+import { TranslateMove } from "../../../animations/translateMove";
 const Portfolio = () => {
-  const [rotateY, setRotateY] = useState("0deg");
-  const [rotateX, setRotateX] = useState("0deg");
-
-  const handleOnMouseEnter = (e) => {
-    const event = e || window.event;
-    const target = event.target || event.srcElement;
-    const rect = target.getBoundingClientRect();
-    const cardWidth = 200;
-    const degIncrement = 0.3;
-
-    const getRotateDeg = (input) => {
-      if (input < cardWidth * 0.33) {
-        return `${degIncrement * 2}deg`;
-      } else if (input >= cardWidth * 0.33 && input < cardWidth * 0.66) {
-        return `${degIncrement}deg`;
-      } else if (input >= cardWidth * 0.66 && input < cardWidth * 0.5) {
-        return "0deg";
-      } else if (input >= cardWidth * 0.5 && input < cardWidth * 0.33) {
-        return `-${degIncrement}deg`;
-      } else {
-        return `-${degIncrement * 2}deg`;
-      }
-    };
-
-    setRotateX(getRotateDeg(window.event.clientY - rect.top));
-    setRotateY(getRotateDeg(window.event.clientX - rect.left));
-  };
-
-  const handleOnMouseLeave = () => {
-    setRotateY("0deg");
-    setRotateX("0deg");
-  };
-
-  const styles = {
-    transitionDuration: "0.5s",
-    transitionProperty: "transform",
-    transform: `rotateY(${rotateX ?? 0}) rotateX(${rotateY ?? 0})`,
-  };
-
   return (
     <section id="portfolio" className="section section-padding">
       <div className="portfolio-title">
@@ -55,15 +15,15 @@ const Portfolio = () => {
       <div className="portfolio-works">
         <div className="portfolio-work">
           <div data-aos="fade-right" className="portfolio-work-container-img">
-            <img
-              id="1"
-              onMouseMove={(event) => handleOnMouseEnter(event)}
-              onMouseLeave={(event) => handleOnMouseLeave(event)}
-              className="portfolio-work-img"
-              alt="test"
-              src={project1}
-              style={styles}
-            ></img>
+            <TranslateMove>
+              {" "}
+              <img
+                id="1"
+                className="portfolio-work-img"
+                alt="test"
+                src={project1}
+              ></img>
+            </TranslateMove>
           </div>
           <div data-aos="fade-right" className="portfolio-work-text">
             <h3>Mastermind</h3>
@@ -85,15 +45,15 @@ const Portfolio = () => {
 
         <div className="portfolio-work">
           <div data-aos="fade-right" className="portfolio-work-container-img">
-            <img
-              id="2"
-              onMouseMove={(event) => handleOnMouseEnter(event, 2)}
-              onMouseLeave={(event) => handleOnMouseLeave(event)}
-              className="portfolio-work-img"
-              alt="test"
-              style={styles}
-              src={project2}
-            ></img>
+            <TranslateMove>
+              {" "}
+              <img
+                id="2"
+                className="portfolio-work-img"
+                alt="test"
+                src={project2}
+              ></img>
+            </TranslateMove>
           </div>
           <div data-aos="fade-right" className="portfolio-work-text">
             <h3>Portfolio</h3>

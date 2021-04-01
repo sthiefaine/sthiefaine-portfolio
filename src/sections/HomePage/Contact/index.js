@@ -65,7 +65,7 @@ const Contact = () => {
             id="f2"
             option={{
               file: dev2,
-              animTimingFunction: "EASE_OUT",
+              animTimingFunction: "EASE",
               type: "oneByOne",
               duration: 200,
             }}

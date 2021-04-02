@@ -8,19 +8,13 @@
 
 @media screen and (max-width: 700px) {
   .section:nth-child(3) {
-    height: 180vh;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .section:nth-child(3) {
-    height: 200vh;
+    height: 190vh;
   }
 }
 
 @media screen and (max-width: 360px) {
   .section:nth-child(3) {
-    height: 250vh;
+    height: 240vh;
   }
 }
 

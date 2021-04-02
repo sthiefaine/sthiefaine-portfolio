@@ -6,12 +6,12 @@ export const HeaderStyled = styled.header`
   position: fixed;
   top: 0;
   z-index: 999;
-  background: ${({ theme }) => theme.HeaderColor};
+  background: ${({ theme }) => theme.headerColor};
   color: ${({ theme }) => theme.colorText};
 
   &.active {
-    box-shadow: 2px 7px 19px -5px rgb(0 0 0 / 21%);
-    -webkit-boxshadow: 2px 7px 19px rgba(0, 0, 0, 0.21);
-    -moz-boxshadow: 2px 7px 19px -5px rgba(0, 0, 0, 0.21);
+    box-shadow: 2px 7px 8px -5px rgb(0 0 0 / 21%);
+    -webkit-boxshadow: 2px 7px 8px rgba(0, 0, 0, 0.21);
+    -moz-boxshadow: 2px 7px 8px -5px rgba(0, 0, 0, 0.21);
   }
 `;

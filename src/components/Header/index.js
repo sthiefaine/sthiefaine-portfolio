@@ -3,19 +3,24 @@ import { Link } from "react-scroll";
 
 import { TSVGletters } from "../../utils/SVGletters";
 
-import "./index.css";
+import ThemeSelector from "../theme";
+
+import { HeaderStyled } from "../../styles/HeaderStyled";
+import { NavStyled } from "../../styles/NavStyled";
+import { SVGStyled } from "../../styles/SVGStyled";
+
 const Header = () => {
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 1.1);
+      setScroll(window.scrollY > 1.2);
     });
   }, []);
 
   return (
-    <header className={scroll ? "header header-active" : "header"}>
-      <nav className="nav">
+    <HeaderStyled className={scroll ? "header active" : "header"}>
+      <NavStyled className="nav">
         <span className="logo">
           <Link
             href="#home"
@@ -26,11 +31,13 @@ const Header = () => {
             offset={0}
             duration={500}
           >
-            <TSVGletters />
+            <SVGStyled>
+              <TSVGletters />
+            </SVGStyled>
           </Link>
         </span>
-        <ul className="nav-items">
-          <li className="nav-item">
+        <ul className="nav__items">
+          <li className="nav__item">
             <Link
               href="#about-me"
               className="link"
@@ -43,7 +50,7 @@ const Header = () => {
               À propos
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav__item">
             <Link
               href="#portfolio"
               className="link"
@@ -56,7 +63,7 @@ const Header = () => {
               Projets
             </Link>
           </li>
-          <li className="nav-item">
+          <li className="nav__item">
             <Link
               href="#contact"
               className="link"
@@ -70,9 +77,9 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <button className="button__theme">☀️</button>
-      </nav>
-    </header>
+        <ThemeSelector />
+      </NavStyled>
+    </HeaderStyled>
   );
 };
 

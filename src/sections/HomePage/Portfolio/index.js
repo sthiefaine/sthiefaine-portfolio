@@ -6,6 +6,9 @@ import { GitIcon } from "../../../utils/SVGsocialIcon";
 import "./index.css";
 
 import { TranslateMove } from "../../../animations/translateMove";
+
+import { SVGStyled } from "../../../styles/SVGStyled";
+
 const Portfolio = () => {
   return (
     <section id="portfolio" className="section section-padding">
@@ -16,7 +19,6 @@ const Portfolio = () => {
         <div className="portfolio-work">
           <div data-aos="fade-right" className="portfolio-work-container-img">
             <TranslateMove>
-              {" "}
               <img
                 id="1"
                 className="portfolio-work-img"
@@ -46,7 +48,6 @@ const Portfolio = () => {
         <div className="portfolio-work">
           <div data-aos="fade-right" className="portfolio-work-container-img">
             <TranslateMove>
-              {" "}
               <img
                 id="2"
                 className="portfolio-work-img"
@@ -59,16 +60,8 @@ const Portfolio = () => {
             <h3>Portfolio</h3>
             <p>
               Création d'un porfolio pour me presenter, utiliser les transitions
-              en css et s'approprier Next.js
+              en css et s'approprier Styled-components
             </p>
-            {/*                 <a
-            className="link"
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
-            Visiter le site
-          </a> */}
           </div>
         </div>
       </div>
@@ -76,12 +69,15 @@ const Portfolio = () => {
       <div className="portfolio-footer">
         <h3>Découvrir mon Github</h3>
         <a
-          className="cv-button"
+          className="cv-button button"
           href="https://github.com/sthiefaine"
           target="_blank"
           rel="noreferrer"
         >
-          <GitIcon />
+          <SVGStyled>
+            <GitIcon />
+          </SVGStyled>
+
           <p>Github</p>
         </a>
       </div>

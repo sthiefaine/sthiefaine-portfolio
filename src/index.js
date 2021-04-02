@@ -4,26 +4,20 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import { ThemeProvider } from "./contexts/themes";
+import GlobalStyle from "./styles/GlobalStyle";
+
 const rootEl = document.getElementById("root");
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <GlobalStyle />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   rootEl
 );
-
-if (module.hot) {
-  module.hot.accept("./App", () => {
-    const NextApp = require("./App").default;
-    ReactDOM.render(
-      <React.StrictMode>
-        <NextApp />
-      </React.StrictMode>,
-      rootEl
-    );
-  });
-}
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

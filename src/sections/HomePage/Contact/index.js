@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="contact-container">
         <div className="contact-buttons">
           <a
-            className="download-button"
+            className="download-button button"
             href={`https://api.whatsapp.com/send?phone=33658200918&text=Bonjour%20Thi%C3%A9faine,`}
             target="_blank"
             rel="noreferrer"
@@ -37,7 +37,7 @@ const Contact = () => {
           </div>
 
           <a
-            className="download-button"
+            className="download-button button"
             href={`mailto:thiefainedev@gmail.com`}
             target="_blank"
             rel="noreferrer"
@@ -49,7 +49,7 @@ const Contact = () => {
           </a>
 
           <a
-            className="download-button"
+            className="download-button button"
             href="https://www.linkedin.com/in/thiefainesimonnou/"
             target="_blank"
             rel="noreferrer"

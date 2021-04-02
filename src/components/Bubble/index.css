@@ -7,12 +7,13 @@
 }
 
 .bubble-XL-left {
-  width: 30vh;
-  height: 30vh;
+  width: 25vh;
+  height: 25vh;
   position: fixed;
-  top: 20vh;
+  top: 50vh;
   left: -2vw;
-  background-color: rgb(222 247 229);
+  background-color: rgb(146 227 169);
+
   border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;
   animation: bubble 5s linear infinite;
 }
@@ -21,7 +22,7 @@
   width: 30vh;
   height: 30vh;
   position: fixed;
-  top: 50vh;
+  top: 20vh;
   right: -2vw;
   background-color: rgb(146 227 169);
   border-radius: 66% 34% 58% 42% / 43% 45% 55% 57%;

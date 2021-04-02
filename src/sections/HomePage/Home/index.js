@@ -8,6 +8,8 @@ import dev from "../../../assets/dev.svg";
 
 import "./index.css";
 
+import { SVGStyled } from "../../../styles/SVGStyled";
+
 const Home = () => {
   const [scroll, setScroll] = useState(false);
 
@@ -32,7 +34,7 @@ const Home = () => {
           >
             <Link
               href="#about-me"
-              className="button"
+              className="button buttonHome"
               to="about-me"
               spy={true}
               smooth={true}
@@ -51,7 +53,7 @@ const Home = () => {
           >
             <Link
               href="#contact"
-              className="button"
+              className="button buttonHome"
               to="contact"
               spy={true}
               smooth={true}
@@ -76,7 +78,10 @@ const Home = () => {
         />
       </div>
       <span className={scroll ? "scrolldown scrolldown-hide" : "scrolldown"}>
-        <ArrowUpIcon /> Faire défiler
+        <SVGStyled>
+          <ArrowUpIcon />
+        </SVGStyled>
+        Faire défiler
       </span>
     </section>
   );

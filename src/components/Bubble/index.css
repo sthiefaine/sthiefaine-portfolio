@@ -7,7 +7,7 @@
 }
 
 .bubble-XL-left {
-  width: 10vw;
+  width: 15vw;
   height: 25vh;
   position: fixed;
   top: 50vh;
@@ -19,7 +19,7 @@
 }
 
 .bubble-XL-right {
-  width: 20vw;
+  width: 25vw;
   height: 30vh;
   position: fixed;
   top: 20vh;

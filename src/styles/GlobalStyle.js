@@ -2,10 +2,31 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
   body {
+    min-width: 300px;
+    margin: 0;
     background: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.colorText};
     transition: all 0.4s linear;
   }
+
+  /* width */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+/* Track */
+body::-webkit-scrollbar-track {
+  box-shadow: black;
+  border-radius: 4px;
+}
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 10px;
+}
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: blue;
+}
 
   .logo {
   display: flex;

@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 
 import { Fade } from "../../../animations/fade";
-import { ArrowUpIcon } from "../../../utils/SVGicon";
+
 import { Link } from "react-scroll";
 import ReactVivus from "react-vivus";
+
 import dev from "../../../assets/dev.svg";
+import { ArrowUpIcon } from "../../../utils/SVGicon";
 
 import "./index.css";
 

@@ -25,7 +25,7 @@ function App() {
     <>
       <Header />
 
-      <main className="main" tabIndex="-1">
+      <main className="main">
         <Home />
         <AboutMe />
         <Portfolio />

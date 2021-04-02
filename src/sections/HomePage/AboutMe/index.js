@@ -20,8 +20,8 @@ const AboutMe = () => {
           <h3>Télécharger mon C.V</h3>
           <a
             className="cv-button button"
-            href="./"
-            download="CV_Thiefaine_Simonnou"
+            href="../../../assets/CV_SIMONNOU-Thiefaine_2021.pdf"
+            download="CV_Thiefaine_Simonnou_2021"
           >
             <SVGStyled>
               <DownloadIcon />

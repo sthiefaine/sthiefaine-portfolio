@@ -1,10 +1,11 @@
-import thiefhead from "../../../assets/thief-head.png";
-import { DownloadIcon } from "../../../utils/SVGicon";
+import "./index.css";
+// Change Stroke of SVG wrapped by this element
+import { SVGStyled } from "../../../styles/SVGStyled";
 
 import thiefainecv from "../../../docs/CV_SIMONNOU-Thiefaine_2021.pdf";
-import "./index.css";
 
-import { SVGStyled } from "../../../styles/SVGStyled";
+import thiefhead from "../../../assets/thief-head.png";
+import { DownloadIcon } from "../../../utils/SVGicon";
 
 const AboutMe = () => {
   return (

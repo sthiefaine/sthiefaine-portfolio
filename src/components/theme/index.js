@@ -1,4 +1,5 @@
 import { useTheme } from "../../contexts/themes";
+// Styles styled-components
 import { ButtonXSStyled } from "../../styles/ButtonXSStyled";
 
 export default function ThemeSelector() {

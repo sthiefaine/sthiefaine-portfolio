@@ -1,13 +1,14 @@
+import "./index.css";
+
 import project1 from "../../../assets/project1-dark.png";
 import project2 from "../../../assets/project2-light.png";
 
-import { GitIcon } from "../../../utils/SVGsocialIcon";
-
-import "./index.css";
-
 import { TranslateMove } from "../../../animations/translateMove";
 
+// Change Stroke of SVG wrapped by this element
 import { SVGStyled } from "../../../styles/SVGStyled";
+
+import { GitIcon } from "../../../utils/SVGsocialIcon";
 
 const Portfolio = () => {
   return (

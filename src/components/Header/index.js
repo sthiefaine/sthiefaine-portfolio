@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+// component to switch theme
+import ThemeSelector from "../theme";
 
 import { TSVGletters } from "../../utils/SVGletters";
 
-import ThemeSelector from "../theme";
-
+// Styles styled-components
 import { HeaderStyled } from "../../styles/HeaderStyled";
 import { NavStyled } from "../../styles/NavStyled";
 import { SVGStyled } from "../../styles/SVGStyled";

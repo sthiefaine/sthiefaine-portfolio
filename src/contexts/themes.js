@@ -2,15 +2,15 @@ import { useState, useContext, createContext } from "react";
 
 import { ThemeProvider as BaseThemeProvider } from "styled-components";
 
-// import theme
+// import theme(s)
 import { lightTheme } from "../themes/themeLight";
-
 import { darkTheme } from "../themes/themeDark";
 
-// == theme context
+// == theme context init
 export const ThemeContext = createContext(null);
 
 // == themeProvider
+//! wrap your PARENT element ( like ( <App /> ) with this
 export const ThemeProvider = ({ children }) => {
   const localSt = localStorage.getItem("currentTheme");
 
@@ -26,6 +26,7 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
+// useTheme
 export const useTheme = () => {
   const context = useContext(ThemeContext);
 

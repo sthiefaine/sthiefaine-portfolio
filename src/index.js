@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 
+// import css
 import "./index.css";
 
-import App from "./App";
-
+// import "styled-components" theme & theme global
 import { ThemeProvider } from "./contexts/themes";
 import GlobalStyle from "./styles/GlobalStyle";
+
+//! import App
+import App from "./App";
 
 const rootEl = document.getElementById("root");
 

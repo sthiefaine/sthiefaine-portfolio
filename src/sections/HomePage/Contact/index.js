@@ -1,5 +1,7 @@
 import ReactVivus from "react-vivus";
 
+import "./index.css";
+
 import {
   EmailIcon,
   WhatsAppIcon,
@@ -8,8 +10,6 @@ import {
 
 import dev2 from "../../../assets/keyboard.svg";
 import whatsappqrcode from "../../../assets/qrcode_api.whatsapp.com_thiefaine.png";
-
-import "./index.css";
 
 const Contact = () => {
   return (

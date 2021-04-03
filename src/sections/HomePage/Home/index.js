@@ -1,16 +1,16 @@
 import { useState, useEffect } from "react";
-
-import { Fade } from "../../../animations/fade";
-
 import { Link } from "react-scroll";
 import ReactVivus from "react-vivus";
 
-import dev from "../../../assets/dev.svg";
-import { ArrowUpIcon } from "../../../utils/SVGicon";
-
+import { Fade } from "../../../animations/fade";
+// CSS
 import "./index.css";
 
+// Change Stroke of svg wrapped by this element
 import { SVGStyled } from "../../../styles/SVGStyled";
+// SVG
+import dev from "../../../assets/dev.svg";
+import { ArrowUpIcon } from "../../../utils/SVGicon";
 
 const Home = () => {
   const [scroll, setScroll] = useState(false);

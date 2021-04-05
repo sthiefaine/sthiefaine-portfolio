@@ -17,8 +17,9 @@ const AboutMe = () => {
           <br /> Cela m'a permis de découvrir les différentes technologies
           utilisées pour réaliser des projets web et l'évolution de la création
           de sites internet.
+          <br />
           <br /> N'hesitez pas à me contacter.
-          <br /> Je suis ouvert à la réalisation de tout test technique
+          <br /> Je suis ouvert à la réalisation de tout test technique.
         </p>
         <div className="cv">
           <h3>Télécharger mon C.V</h3>

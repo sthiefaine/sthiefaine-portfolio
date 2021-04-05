@@ -9,6 +9,7 @@
   .section:nth-child(2) {
     flex-direction: column;
     justify-content: flex-start;
+    height: 120vh;
   }
 }
 
@@ -17,7 +18,8 @@
 }
 
 .information > p {
-  width: 80%;
+  font-size: 1.1rem;
+  width: 90%;
 }
 .cv {
   width: 100%;

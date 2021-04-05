@@ -20,6 +20,10 @@ const Contact = () => {
 
       <div className="contact-container">
         <div className="contact-buttons">
+          <div className="whatsapp-qrcode">
+            <img src={whatsappqrcode} alt="QRCode WhatsApp" />
+          </div>
+
           <a
             className="download-button button"
             href={`https://api.whatsapp.com/send?phone=33658200918&text=Bonjour%20Thi%C3%A9faine,`}
@@ -31,10 +35,6 @@ const Contact = () => {
             </div>
             <div className="download-text">WhatsApp</div>
           </a>
-
-          <div className="whatsapp-qrcode">
-            <img src={whatsappqrcode} alt="QRCode WhatsApp" />
-          </div>
 
           <a
             className="download-button button"

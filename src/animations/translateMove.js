@@ -1,4 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+
+// effect like title.js
 export function TranslateMove({ children }) {
   const elRef = useRef();
 

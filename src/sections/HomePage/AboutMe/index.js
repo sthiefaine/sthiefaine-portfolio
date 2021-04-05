@@ -13,10 +13,12 @@ const AboutMe = () => {
       <div data-aos="fade-up" className="information">
         <h2>Bienvenue 👋</h2>
         <p>
-          C'est ma curiosité qui m'a amené à faire une reconversion
-          professionnelle dans ce millieu et grâce à cela, j'ai pu approfondir
-          ma soif de connaissance en apprenant React, Wordpress, Lumen, la
-          POO...
+          J'ai choisi de faire une reconversion dans le développement web.
+          <br /> Cela m'a permis de découvrir les différentes technologies
+          utilisées pour réaliser des projets web et l'évolution de la création
+          de sites internet.
+          <br /> N'hesitez pas à me contacter.
+          <br /> Je suis ouvert à la réalisation de tout test technique
         </p>
         <div className="cv">
           <h3>Télécharger mon C.V</h3>

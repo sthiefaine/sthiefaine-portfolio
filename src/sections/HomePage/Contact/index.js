@@ -1,7 +1,4 @@
-import { useRef } from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
-import lottieContact from "../../../assets/37147-contact-us.json";
-
+import contactSvg from "../../../assets/contactSvg.svg";
 import "./index.css";
 
 import {
@@ -13,14 +10,10 @@ import {
 import whatsappqrcode from "../../../assets/qrcode_api.whatsapp.com_thiefaine.png";
 
 const Contact = () => {
-  const lottieContactRef = useRef();
-
   return (
     <section
       id="contact"
       className="
-    section 
-    section-column 
     section-padding
     contact
     "
@@ -74,15 +67,13 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact__img__container">
-          <Player
-            ref={lottieContactRef}
-            freeze={true}
-            speed="0.5"
-            autoplay={true}
-            loop={true}
-            controls={true}
-            src={lottieContact}
-            style={{ width: "calc(20vw + 20vh)" }}
+          <img
+            load="lazy"
+            className="contact__img"
+            src={contactSvg}
+            alt="mail decoration"
+            width="200"
+            height="200"
           />
         </div>
       </div>

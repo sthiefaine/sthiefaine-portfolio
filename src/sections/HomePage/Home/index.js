@@ -1,8 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-
-import { Player } from "@lottiefiles/react-lottie-player";
-import lottieDev from "../../../assets/43885-laptop-working.json";
 
 import { Fade } from "../../../animations/fade";
 // CSS
@@ -12,9 +9,8 @@ import "./index.css";
 import { SVGStyled } from "../../../styles/SVGStyled";
 // SVG
 import { ArrowUpIcon } from "../../../utils/SVGicon";
-
+import homeSvg from "../../../assets/homeSvg.svg";
 const Home = () => {
-  const lottieDevRef = useRef();
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -76,16 +72,7 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <Player
-          ref={lottieDevRef}
-          speed="0.1"
-          freeze={true}
-          autoplay={true}
-          loop={true}
-          controls={true}
-          src={lottieDev}
-          style={{ width: "calc(20vw + 20vh)" }}
-        />
+        <img src={homeSvg} alt="home decoration" height="200" width="200" />
       </div>
       <span
         className={

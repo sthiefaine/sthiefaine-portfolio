@@ -9,10 +9,17 @@ import { DownloadIcon } from "../../../utils/SVGicon";
 
 const AboutMe = () => {
   return (
-    <section id="about-me" className="section section-padding">
-      <div data-aos="fade-up" className="information">
-        <h2>Bienvenue 👋</h2>
-        <p>
+    <section
+      id="about-me"
+      className="
+
+    section-padding 
+    aboutMe
+    "
+    >
+      <div data-aos="fade-up" className="aboutMe__information">
+        <h2 className="aboutMe__information__title">Bienvenue 👋</h2>
+        <p className="aboutMe__information__p">
           J'ai choisi de faire une reconversion dans le développement web.
           <br /> Cela m'a permis de découvrir les différentes technologies
           utilisées pour réaliser des projets web et l'évolution de la création
@@ -22,9 +29,9 @@ const AboutMe = () => {
           <br /> Je suis ouvert à la réalisation de tout test technique.
         </p>
         <div className="cv">
-          <h3>Télécharger mon C.V</h3>
+          <h3 className="cv__title">Télécharger mon C.V</h3>
           <a
-            className="cv-button button"
+            className="button button__circle"
             href={thiefainecv}
             download="CV_Thiefaine_Simonnou_2021"
           >
@@ -32,14 +39,14 @@ const AboutMe = () => {
               <DownloadIcon />
             </SVGStyled>
 
-            <p>C.V</p>
+            <p className="button__circle__p">C.V</p>
           </a>
         </div>
       </div>
 
-      <div data-aos="fade-up" className="headshot-container">
+      <div data-aos="fade-up" className="aboutMe__headshot">
         <img
-          className="headshot"
+          className="aboutMe__headshot__img"
           src={thiefhead}
           alt="Thiéfaine simonnou headshot"
         />

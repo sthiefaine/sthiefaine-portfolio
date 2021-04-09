@@ -24,11 +24,17 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="section section-column section-padding">
-      <div className="home-text">
-        <h1>Thiéfaine Simonnou</h1>
-        <p>Développeur web & intégrateur.</p>
-        <div className="container-buttons">
+    <section
+      id="home"
+      className="section 
+    section-padding
+     home
+    "
+    >
+      <div className="home__text">
+        <h1 className="home__text__title">Thiéfaine Simonnou</h1>
+        <p className="home__text__p">Développeur web & intégrateur.</p>
+        <div className="home__buttons__container">
           <Fade
             visible={true}
             duration={1200}
@@ -38,7 +44,7 @@ const Home = () => {
           >
             <Link
               href="#about-me"
-              className="button buttonHome"
+              className="button home__button"
               to="about-me"
               spy={true}
               smooth={true}
@@ -57,7 +63,7 @@ const Home = () => {
           >
             <Link
               href="#contact"
-              className="button buttonHome"
+              className="button home__button"
               to="contact"
               spy={true}
               smooth={true}
@@ -81,7 +87,11 @@ const Home = () => {
           style={{ width: "calc(20vw + 20vh)" }}
         />
       </div>
-      <span className={scroll ? "scrolldown scrolldown-hide" : "scrolldown"}>
+      <span
+        className={
+          scroll ? "home__scrolldown home__scrolldown-hide" : "home__scrolldown"
+        }
+      >
         <SVGStyled>
           <ArrowUpIcon />
         </SVGStyled>

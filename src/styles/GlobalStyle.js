@@ -132,4 +132,27 @@ p {
   text-decoration: none;
   color: ${({ theme }) => theme.colorText};
 }
+
+.button__circle {
+  border: 1px solid #2a2a2a;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button__circle__p {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.button__circle:link,
+.button__circle:visited {
+  text-decoration: none;
+  color: ${({ theme }) => theme.colorText};
+}
+
 `;

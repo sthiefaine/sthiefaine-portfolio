@@ -1,4 +1,4 @@
-.section:nth-child(4) {
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -6,12 +6,12 @@
   height: 110vh;
 }
 
-.contact-title {
+.contact__title {
   width: 90%;
   margin-bottom: 3vh;
 }
 
-.contact-container {
+.contact__container {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -19,19 +19,19 @@
 }
 
 @media screen and (max-width: 700px) {
-  .contact-container {
+  .contact__container {
     flex-direction: column;
     justify-content: space-around;
   }
 }
 
-.contact-img {
+.contact__img {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contact-buttons {
+.contact__buttons {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,24 +39,7 @@
   align-items: center;
 }
 
-.contact-button {
-  background: black;
-  color: white;
-
-  width: 8rem;
-
-  margin: 0.5rem;
-  padding: 1rem;
-  border-radius: 1rem;
-
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-
-  font-size: 1.2rem;
-}
-
-.download-button {
+.button__download {
   width: 60%;
   padding: 0.5rem 1rem;
   display: flex;
@@ -69,7 +52,7 @@
   border-radius: 7px;
 }
 
-.download-icon {
+.button__download__icon {
   background-color: #fff;
   height: calc(40px + 1rem);
   width: 25%;
@@ -80,26 +63,27 @@
   border-bottom-left-radius: 7px;
 }
 
-.download-text {
+.button__download__text {
   border-left: none;
   padding: 1rem 2rem;
   font-size: 20px;
 }
 
-.whatsapp-qrcode {
+.whatsapp__qrcode {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: -1rem;
   margin-bottom: 1rem;
 }
-.whatsapp-qrcode > img {
-  width: 40%;
-  border-radius: 5px;
-}
 
 @media screen and (max-width: 700px) {
-  .whatsapp-qrcode {
+  .whatsapp__qrcode {
     display: none;
   }
+}
+
+.whatsapp__qrcode__img {
+  width: 40%;
+  border-radius: 5px;
 }

@@ -16,54 +16,64 @@ const Contact = () => {
   const lottieContactRef = useRef();
 
   return (
-    <section id="contact" className="section section-column section-padding">
-      <div className="contact-title">
-        <h2>Me contacter</h2>
-      </div>
+    <section
+      id="contact"
+      className="
+    section 
+    section-column 
+    section-padding
+    contact
+    "
+    >
+      <h2 className="contact__title">Me contacter</h2>
 
-      <div className="contact-container">
-        <div className="contact-buttons">
-          <div className="whatsapp-qrcode">
-            <img src={whatsappqrcode} alt="QRCode WhatsApp" />
+      <div className="contact__container">
+        <div className="contact__buttons">
+          <div className="whatsapp__qrcode">
+            <img
+              className="whatsapp__qrcode__img"
+              src={whatsappqrcode}
+              alt="QRCode WhatsApp"
+            />
           </div>
 
           <a
-            className="download-button button"
+            className="button button__download"
             href={`https://api.whatsapp.com/send?phone=33658200918&text=Bonjour%20Thi%C3%A9faine,`}
             target="_blank"
             rel="noreferrer"
           >
-            <div className="download-icon">
+            <div className="button__download__icon">
               <WhatsAppIcon />
             </div>
-            <div className="download-text">WhatsApp</div>
+            <div className="button__download__text">WhatsApp</div>
           </a>
 
           <a
-            className="download-button button"
+            className="button button__download"
             href={`mailto:thiefainedev@gmail.com`}
             target="_blank"
             rel="noreferrer"
           >
-            <div className="download-icon">
+            <div className="button__download__icon">
               <EmailIcon />
             </div>
-            <div className="download-text">Email</div>
+            <div className="button__download__text">Email</div>
           </a>
 
           <a
-            className="download-button button"
+            className="button button__download"
             href="https://www.linkedin.com/in/thiefainesimonnou/"
             target="_blank"
             rel="noreferrer"
           >
-            <div className="download-icon">
+            <div className="button__download__icon">
               <LinkedinIcon />
             </div>
-            <div className="download-text">Linkedin</div>
+            <div className="button__download__text">Linkedin</div>
           </a>
         </div>
-        <div className="contact-img">
+        <div className="contact__img__container">
           <Player
             ref={lottieContactRef}
             freeze={true}

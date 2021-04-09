@@ -46,6 +46,7 @@ const AboutMe = () => {
 
       <div data-aos="fade-up" className="aboutMe__headshot">
         <img
+          loading="lazy"
           className="aboutMe__headshot__img"
           src={thiefhead}
           alt="Thiéfaine simonnou headshot"

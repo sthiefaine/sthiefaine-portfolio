@@ -30,8 +30,9 @@ const Portfolio = () => {
           >
             <TranslateMove>
               <img
+                loading="lazy"
                 className="portfolio__work__img"
-                alt="test"
+                alt="Mastermind project"
                 src={project1}
               ></img>
             </TranslateMove>
@@ -61,8 +62,9 @@ const Portfolio = () => {
           >
             <TranslateMove>
               <img
+                loading="lazy"
                 className="portfolio__work__img"
-                alt="test"
+                alt="portfolio project"
                 src={project2}
               ></img>
             </TranslateMove>

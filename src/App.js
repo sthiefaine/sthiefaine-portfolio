@@ -22,7 +22,7 @@ function App() {
 
   // load aos for scroll effect
   useEffect(() => {
-    Aos.init({ duration: 1200 });
+    Aos.init();
   }, []);
 
   return (

@@ -1,4 +1,6 @@
-import ReactVivus from "react-vivus";
+import { useRef } from "react";
+import { Player } from "@lottiefiles/react-lottie-player";
+import lottieContact from "../../../assets/37147-contact-us.json";
 
 import "./index.css";
 
@@ -8,10 +10,11 @@ import {
   LinkedinIcon,
 } from "../../../utils/SVGsocialIcon";
 
-import dev2 from "../../../assets/keyboard.svg";
 import whatsappqrcode from "../../../assets/qrcode_api.whatsapp.com_thiefaine.png";
 
 const Contact = () => {
+  const lottieContactRef = useRef();
+
   return (
     <section id="contact" className="section section-column section-padding">
       <div className="contact-title">
@@ -61,15 +64,15 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact-img">
-          <ReactVivus
-            id="f2"
-            option={{
-              file: dev2,
-              animTimingFunction: "EASE",
-              type: "oneByOne",
-              duration: 200,
-            }}
-            style={{ width: "calc(25vw + 15vh)" }}
+          <Player
+            ref={lottieContactRef}
+            freeze={true}
+            speed="0.5"
+            autoplay={true}
+            loop={true}
+            controls={true}
+            src={lottieContact}
+            style={{ width: "calc(20vw + 20vh)" }}
           />
         </div>
       </div>

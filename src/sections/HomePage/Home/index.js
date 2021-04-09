@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-scroll";
-import ReactVivus from "react-vivus";
+
+import { Player } from "@lottiefiles/react-lottie-player";
+import lottieDev from "../../../assets/43885-laptop-working.json";
 
 import { Fade } from "../../../animations/fade";
 // CSS
@@ -9,10 +11,10 @@ import "./index.css";
 // Change Stroke of svg wrapped by this element
 import { SVGStyled } from "../../../styles/SVGStyled";
 // SVG
-import dev from "../../../assets/dev.svg";
 import { ArrowUpIcon } from "../../../utils/SVGicon";
 
 const Home = () => {
+  const lottieDevRef = useRef();
   const [scroll, setScroll] = useState(false);
 
   useEffect(() => {
@@ -68,15 +70,15 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <ReactVivus
-          id="foo"
-          option={{
-            file: dev,
-            animTimingFunction: "EASE_OUT",
-            type: "sync",
-            duration: 200,
-          }}
-          style={{ width: "calc(20vw + 15vh)" }}
+        <Player
+          ref={lottieDevRef}
+          speed="0.1"
+          freeze={true}
+          autoplay={true}
+          loop={true}
+          controls={true}
+          src={lottieDev}
+          style={{ width: "calc(20vw + 20vh)" }}
         />
       </div>
       <span className={scroll ? "scrolldown scrolldown-hide" : "scrolldown"}>

@@ -95,6 +95,7 @@
 }
 .whatsapp-qrcode > img {
   width: 40%;
+  border-radius: 5px;
 }
 
 @media screen and (max-width: 700px) {

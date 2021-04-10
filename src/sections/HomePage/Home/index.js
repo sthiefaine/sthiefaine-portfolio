@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import lottie from "lottie-web/build/player/lottie_light";
+import lottieDev from "../../../assets/43885-laptop-working.json";
 
 import { Fade } from "../../../animations/fade";
 // CSS
@@ -9,7 +11,7 @@ import "./index.css";
 import { SVGStyled } from "../../../styles/SVGStyled";
 // SVG
 import { ArrowUpIcon } from "../../../utils/SVGicon";
-import homeSvg from "../../../assets/homeSvg.svg";
+
 const Home = () => {
   const [scroll, setScroll] = useState(false);
 
@@ -17,6 +19,18 @@ const Home = () => {
     window.addEventListener("scroll", () => {
       setScroll(window.scrollY > 1.1);
     });
+  }, []);
+
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.querySelector("#lottieDev"),
+      animationData: lottieDev,
+      name: "lottieDev",
+      renderer: "svg", // "canvas", "html"
+      loop: true, // boolean
+      autoplay: true, // boolean
+    });
+    lottie.setSpeed(0.3, "lottieDev");
   }, []);
 
   return (
@@ -72,7 +86,13 @@ const Home = () => {
         </div>
       </div>
       <div>
-        <img src={homeSvg} alt="home decoration" height="200" width="200" />
+        <div
+          id="lottieDev"
+          style={{
+            width: 300,
+            height: 300,
+          }}
+        />
       </div>
       <span
         className={

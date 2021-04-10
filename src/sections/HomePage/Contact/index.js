@@ -1,4 +1,8 @@
-import contactSvg from "../../../assets/contactSvg.svg";
+import { useEffect } from "react";
+
+import lottie from "lottie-web/build/player/lottie_light";
+import lottieContact from "../../../assets/37147-contact-us.json";
+
 import "./index.css";
 
 import {
@@ -10,6 +14,18 @@ import {
 import whatsappqrcode from "../../../assets/qrcode_api.whatsapp.com_thiefaine.png";
 
 const Contact = () => {
+  useEffect(() => {
+    lottie.loadAnimation({
+      container: document.querySelector("#lottieContact"),
+      animationData: lottieContact,
+      name: "lottieContact",
+      renderer: "svg", // "canvas", "html"
+      loop: true, // boolean
+      autoplay: true, // boolean
+    });
+    lottie.setSpeed(0.5, "lottieContact");
+  }, []);
+
   return (
     <section
       id="contact"
@@ -67,13 +83,12 @@ const Contact = () => {
           </a>
         </div>
         <div className="contact__img__container">
-          <img
-            load="lazy"
-            className="contact__img"
-            src={contactSvg}
-            alt="mail decoration"
-            width="200"
-            height="200"
+          <div
+            id="lottieContact"
+            style={{
+              width: 300,
+              height: 300,
+            }}
           />
         </div>
       </div>

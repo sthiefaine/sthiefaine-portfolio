@@ -2,7 +2,7 @@ import "./index.css";
 // Change Stroke of SVG wrapped by this element
 import { SVGStyled } from "../../../styles/SVGStyled";
 
-import thiefainecv from "../../../docs/CV_SIMONNOU-Thiefaine_2021.pdf";
+import thiefainecv from "../../../docs/CV_SIMONNOU-Thiefaine-h.pdf";
 
 import thiefhead from "../../../assets/thief-head.png";
 import { DownloadIcon } from "../../../utils/SVGicon";

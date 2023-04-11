@@ -16,7 +16,7 @@ const Portfolio = () => {
       id="portfolio"
       className="
 
-    section-padding 
+    section-padding
     portfolio
     "
     >

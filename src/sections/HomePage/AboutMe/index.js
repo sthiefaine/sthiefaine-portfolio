@@ -2,7 +2,7 @@ import "./index.css";
 // Change Stroke of SVG wrapped by this element
 import { SVGStyled } from "../../../styles/SVGStyled";
 
-import thiefainecv from "../../../docs/CV_SIMONNOU-Thiefaine-h.pdf";
+import thiefainecv from "../../../docs/CV_Thiefaine_Simonnou.pdf";
 
 import thiefhead from "../../../assets/thief-head.png";
 import { DownloadIcon } from "../../../utils/SVGicon";
@@ -13,7 +13,7 @@ const AboutMe = () => {
       id="about-me"
       className="
 
-    section-padding 
+    section-padding
     aboutMe
     "
     >
